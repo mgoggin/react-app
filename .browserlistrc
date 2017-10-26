@@ -1,0 +1,12 @@
+# Browsers this toolchain will support
+# https://github.com/ai/browserslist
+
+ie 11
+last 2 edge versions
+last 2 chrome versions
+firefox esr
+last 2 opera versions
+last 4 ios versions
+last 2 chromeandroid versions
+last 2 safari versions
+last 2 Samsung versions

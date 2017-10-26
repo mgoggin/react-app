@@ -1,0 +1,41 @@
+{
+  "parser": "babel-eslint",
+  "parserOptions": {
+    "ecmaVersion": 6,
+    "ecmaFeatures": {
+      "experimentalObjectRestSpread": true,
+      "jsx": true
+    },
+    "sourceType": "module"
+  },
+  "env": {
+    "browser": true,
+    "commonjs": true,
+    "es6": true,
+    "amd": true,
+    "shared-node-browser": true
+  },
+  "extends": [
+    "eslint:recommended",
+    "plugin:react/recommended",
+    "plugin:import/errors",
+    "plugin:import/warnings"
+  ],
+  "settings": {
+    "import/resolver": {
+      "webpack": {
+        "config": "webpack.development.js"
+      }
+    }
+  },
+  "plugins": [
+    "react",
+    "import"
+  ],
+  "rules": {
+    "indent": ["warn", 2],
+    "linebreak-style": ["error", "unix"],
+    "quotes": ["warn", "single"],
+    "semi": ["warn", "always"]
+  }
+}
