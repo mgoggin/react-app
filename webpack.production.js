@@ -1,5 +1,6 @@
 /* eslint-env node */
 
+const path = require('path');
 const webpack = require('webpack');
 const merge = require('webpack-merge');
 const common = require('./webpack.common.js');
@@ -15,7 +16,7 @@ module.exports = merge(common, {
         test: /\.s?css$/,
         use: ExtractTextPlugin.extract({
           fallback: 'style-loader?sourceMap',
-          use: 'css-loader?modules&importLoaders=1&localIdentName=[name]__[local]___[hash:base64:5]!sass-loader'
+          use: 'css-loader?modules&importLoaders=1&localIdentName=[name]__[local]___[hash:base64:5]!sass-loader?includePaths[]=' + path.resolve(__dirname, 'src')
         })
       }
     ]

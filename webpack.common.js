@@ -36,7 +36,7 @@ module.exports = {
         test: /\.s?css$/,
         use: [
           'style-loader?sourceMap',
-          'css-loader?sourceMap&modules&importLoaders=1&localIdentName=[path]___[name]__[local]___[hash:base64:5]!sass-loader?sourceMap',
+          'css-loader?sourceMap&modules&importLoaders=1&localIdentName=[path]___[name]__[local]___[hash:base64:5]!sass-loader?sourceMap&includePaths[]=' + path.resolve(__dirname, 'src'),
           'postcss-loader'
         ]
       },
