@@ -33,14 +33,6 @@ module.exports = {
         use: ['babel-loader']
       },
       {
-        test: /\.s?css$/,
-        use: [
-          'style-loader?sourceMap',
-          'css-loader?sourceMap&modules&importLoaders=1&localIdentName=[path]___[name]__[local]___[hash:base64:5]!sass-loader?sourceMap&includePaths[]=' + path.resolve(__dirname, 'src'),
-          'postcss-loader'
-        ]
-      },
-      {
         test: /\.(png|svg|jpg|gif)$/,
         use: [
           'file-loader?name=images/[name].[hash].[ext]'
