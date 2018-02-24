@@ -5,6 +5,6 @@
   ],
   "presets": [
     "react",
-    ["env", { "forceAllTransforms": true }]
+    ["env", { "modules": false, "useBuiltins": "usage" }]
   ]
 }

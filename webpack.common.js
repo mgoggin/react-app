@@ -11,7 +11,7 @@ module.exports = {
     extensions: ['.js', '.jsx', '.es6']
   },
   entry: {
-    app: ['babel-polyfill', './index.js']
+    app: './index.js'
   },
   output: {
     filename: '[name].bundle.[hash].js',
