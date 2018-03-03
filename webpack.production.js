@@ -4,7 +4,6 @@ const path = require('path');
 const webpack = require('webpack');
 const merge = require('webpack-merge');
 const common = require('./webpack.common.js');
-const UglifyJSPlugin = require('uglifyjs-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const CompressionWebpackPlugin = require('compression-webpack-plugin');
 
@@ -14,6 +13,7 @@ const extractStyles = new ExtractTextPlugin({
 });
 
 module.exports = merge(common, {
+  mode: 'production',
   devtool: 'source-map',
   module: {
     rules: [
@@ -27,9 +27,6 @@ module.exports = merge(common, {
     ]
   },
   plugins: [
-    new UglifyJSPlugin({
-      sourceMap: true
-    }),
     extractStyles,
     new CompressionWebpackPlugin({
       test: /\.(js|css|html|png|jpg|gif|svg)$/,

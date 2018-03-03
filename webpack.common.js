@@ -11,7 +11,7 @@ module.exports = {
     extensions: ['.js', '.jsx', '.es6']
   },
   entry: {
-    app: './index.js'
+    app: ['./index.js']
   },
   output: {
     filename: '[name].bundle.[hash].js',
@@ -21,7 +21,7 @@ module.exports = {
   plugins: [
     new CleanWebpackPlugin(['dist']),
     new HtmlWebpackPlugin({
-      template: './index.html',
+      template: path.resolve(__dirname, 'src', 'index.html'),
       filename: 'index.html'
     })
   ],

@@ -47,7 +47,7 @@ Declare what browsers you support in `.browserlistrc`. Any plugin or tooling in 
 
 ## Library Support
 
-###### Webpack 3
+###### Webpack 4
 ###### Babel 6
 ###### SASS (node-sass)
 ###### React 16
