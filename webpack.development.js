@@ -10,12 +10,18 @@ const common = require('./webpack.common.js');
 module.exports = merge(common, {
   mode: 'development',
   devtool: 'eval',
-  devServer: {
-    contentBase: path.resolve(__dirname, 'dist'),
-    hot: true
+  serve: {
+    content: path.resolve(__dirname, 'dist'),
+    host: process.env['WEBPACK_HOST'] || 'localhost',
+    port: process.env['WEBPACK_PORT'] || 8000,
+    dev: {
+      publicPath: '/'
+    },
+    hot: {
+      reload: true
+    }
   },
   plugins: [
-    new webpack.HotModuleReplacementPlugin(),
     new webpack.NamedModulesPlugin()
   ],
   module: {
